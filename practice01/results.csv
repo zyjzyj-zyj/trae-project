@@ -1,0 +1,24 @@
+run,ok,answer,correct,error,duration,total_tokens,completion_tokens,speed_tokens_per_s
+1,False,,False,HTTP 400 Bad Request,,,,
+2,False,,False,HTTP 400 Bad Request,,,,
+3,False,,False,HTTP 400 Bad Request,,,,
+4,False,,False,HTTP 400 Bad Request,,,,
+5,False,,False,HTTP 400 Bad Request,,,,
+1,False,,False,HTTP 400 Bad Request,,,,
+2,False,,False,HTTP 400 Bad Request,,,,
+3,False,,False,HTTP 400 Bad Request,,,,
+4,False,,False,HTTP 400 Bad Request,,,,
+5,False,,False,HTTP 400 Bad Request,,,,
+1,True,文中未提及任何关于“最爱的老师”的内容，无法回答该问题。,False,,0.9308476448059082,1098,17,18.262924222733233
+2,True,文中未提及任何关于“最爱的老师”的内容，无法回答该问题。,False,,0.3022751808166504,1098,17,56.2401450032102
+3,True,文中未提及任何关于“最爱的老师”的内容，无法回答该问题。,False,,0.30127429962158203,1098,17,56.42698371999531
+1,False,,False,HTTP 400 Bad Request,,,,
+2,False,,False,HTTP 400 Bad Request,,,,
+3,False,,False,HTTP 400 Bad Request,,,,
+4,False,,False,HTTP 400 Bad Request,,,,
+5,False,,False,HTTP 400 Bad Request,,,,
+1,True,谢心,True,,0.7518179416656494,1062,3,3.990327755883975
+2,True,谢心,True,,0.09608745574951172,1062,3,31.221557242816733
+3,True,谢心,True,,0.09508681297302246,1062,3,31.55011621696843
+4,True,谢心,True,,0.09608745574951172,1062,3,31.221557242816733
+5,True,谢心,True,,0.09608721733093262,1062,3,31.221634712011095
