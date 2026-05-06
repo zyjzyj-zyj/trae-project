@@ -94,6 +94,21 @@ ANYTHINGLLM_WORKSPACE_SLUG="你的_WORKSPACE_SLUG"
 
 ---
 
+### [Practice 06 - 链式工具调用与复杂任务拆解](file:///e:/Trae_projects/1/practice06)
+- [tool_client.py](file:///e:/Trae_projects/1/practice06/tool_client.py): 实现基于决策循环的链式工具调用框架。
+- **核心功能**:
+  1. **ChainedCallContext**: 维护调用历史、中间变量和迭代状态。
+  2. **决策循环 (Decision Loop)**: LLM 每次迭代分析当前进度，决定是继续调用工具还是输出最终答案。
+  3. **双重格式支持**: 解析 LLM 输出时同时支持标准的 `tool_calls` 格式和自定义的 JSON 决策格式（`{"done": bool, ...}`）。
+  4. **鲁棒性处理**: 自动提取 Markdown 代码块中的 JSON，处理解析失败和工具执行异常。
+  5. **运行模式**:
+     - **交互模式**: 启动后可直接与 AI 助手对话，支持输入 `exit`、`quit` 或 `退出` 结束。
+     - **测试模式**: 支持通过命令行参数 `--test` 或 `--test-all` 触发自动化测试。
+- **教学目标**: 学习如何构建自主决策的 AI Agent，理解如何通过循环和状态管理让 LLM 处理需要多个步骤才能完成的复杂任务。
+- **路径说明**: 在 Practice 06 中，所有工具操作（如文件读写、目录创建）的工作目录均为 `practice06` 文件夹。所有相对路径都将相对于该脚本所在目录进行解析。
+
+---
+
 ## 开发环境配置
 
 1. **Python 环境**: 建议使用 Python 3.12+。
@@ -131,4 +146,17 @@ ANYTHINGLLM_WORKSPACE_SLUG="你的_WORKSPACE_SLUG"
 # 运行 practice05
 .\venv\Scripts\python.exe practice05/chat_summary.py
 .\venv\Scripts\python.exe practice05/test_notice_skill.py
+
+# 运行 practice06
+.\venv\Scripts\python.exe practice06/tool_client.py
+
+# practice06 命令行参数说明：
+# 1. 进入交互模式 (默认)
+.\venv\Scripts\python.exe practice06/tool_client.py
+
+# 2. 运行所有测试用例
+.\venv\Scripts\python.exe practice06/tool_client.py --test-all
+
+# 3. 运行指定测试用例 (1, 2 或 3)
+.\venv\Scripts\python.exe practice06/tool_client.py --test 1
 ```
