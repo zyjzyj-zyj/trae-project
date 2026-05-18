@@ -109,6 +109,23 @@ ANYTHINGLLM_WORKSPACE_SLUG="你的_WORKSPACE_SLUG"
 
 ---
 
+### [Reading - 带文件操作功能的聊天程序](file:///e:/Trae_projects/reading)
+- [chat_with_files.py](file:///e:/Trae_projects/reading/chat_with_files.py): 基于 practice06 开发的轻量级聊天程序，支持文件读写操作。
+- **核心功能**:
+  1. **交互式对话**: 用户可以与 LLM 自由对话，支持自然语言交流。
+  2. **智能文件操作**: LLM 能理解用户的自然语言意图并自动调用相应工具：
+     - **读取文件**: 当用户要求读取文件时，自动调用 `read_file` 工具读取 reading 目录下的文件内容。
+     - **写入文件**: 当用户要求写入文件时，自动调用 `write_file` 工具在 reading 目录下生成文件。
+  3. **工具调用可视化**: 当 LLM 调用工具时，会在界面上显示工具名称和执行结果。
+  4. **路径安全**: 所有文件操作都限制在 reading 目录下，确保文件安全。
+- **使用场景示例**:
+  - "读取读书心得.md" - 读取指定文件内容
+  - "把这段文字保存到笔记.txt" - 将内容写入文件
+  - "帮我写一首诗，然后保存到 poem.txt" - 结合对话和文件操作
+- **教学目标**: 学习如何将工具调用集成到自然对话中，实现无缝的人机交互体验。
+
+---
+
 ## 开发环境配置
 
 1. **Python 环境**: 建议使用 Python 3.12+。
@@ -150,6 +167,9 @@ ANYTHINGLLM_WORKSPACE_SLUG="你的_WORKSPACE_SLUG"
 # 运行 practice06
 .\venv\Scripts\python.exe practice06/tool_client.py
 
+# 运行 reading 目录下的聊天程序
+.\venv\Scripts\python.exe reading/chat_with_files.py
+
 # practice06 命令行参数说明：
 # 1. 进入交互模式 (默认)
 .\venv\Scripts\python.exe practice06/tool_client.py
@@ -160,3 +180,35 @@ ANYTHINGLLM_WORKSPACE_SLUG="你的_WORKSPACE_SLUG"
 # 3. 运行指定测试用例 (1, 2 或 3)
 .\venv\Scripts\python.exe practice06/tool_client.py --test 1
 ```
+
+## practice01 网页内容摘要工具
+
+一个基于 Python 的命令行工具，用于抓取网页正文内容并生成摘要。
+
+### 功能特点
+
+支持从 HTTP/HTTPS 网页中提取正文内容，去除广告、导航栏等无关元素，生成 100-300 字的文本摘要。当前版本使用 Mock 模型进行演示，可后续接入 Llama、Qwen 等本地模型。
+
+### 文件结构
+
+practice01/
+├── web_summarizer.py          # 主程序
+├── requirements.txt            # Python 依赖
+├── config.example.yaml        # 配置模板
+├── test_web_summarizer.py     # 单元测试
+├── test_page.html             # 测试用网页
+├── test_config.yaml           # 测试配置
+├── requirement.md             # 需求文档
+├── spec.md                    # 规格文档
+├── api.md                     # API 设计文档
+└── test.md                    # 测试文档
+
+### 使用方法
+
+1. 进入 practice01 目录
+2. 安装依赖：pip install -r requirements.txt
+3. 运行工具：python web_summarizer.py --url 网页地址
+
+### 测试结果
+
+所有 15 个单元测试均已通过。

@@ -1,0 +1,69 @@
+digraph G {
+    graph [rankdir=TB, ranksep=0.5, layout=dot, clusterrank="local"];
+    subgraph "cluster_G" {
+
+        graph [style="filled,rounded", fillcolor="#80808018", label=""];
+        "tool_client" [label="tool_client", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0", tooltip="tool_client\nE:\Trae_projects\1\practice06\tool_client.py"];
+        subgraph "cluster_tool_client" {
+
+            graph [style="filled,rounded", fillcolor="#80808018", label="tool_client"];
+            "tool_client__AVAILABLE_TOOLS" [label="AVAILABLE_TOOLS", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.AVAILABLE_TOOLS\nE:\Trae_projects\1\practice06\tool_client.py:87\nname in tool_client"];
+            "tool_client__ChainedCallContext" [label="ChainedCallContext", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.ChainedCallContext\nE:\Trae_projects\1\practice06\tool_client.py:155\nclass in tool_client"];
+            "tool_client__TOOLS_SCHEMA" [label="TOOLS_SCHEMA", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.TOOLS_SCHEMA\nE:\Trae_projects\1\practice06\tool_client.py:94\nname in tool_client"];
+            "tool_client__build_analysis_prompt" [label="build_analysis_prompt", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.build_analysis_prompt\nE:\Trae_projects\1\practice06\tool_client.py:207\nfunction in tool_client"];
+            "tool_client__call_llm" [label="call_llm", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.call_llm\nE:\Trae_projects\1\practice06\tool_client.py:176\nfunction in tool_client"];
+            "tool_client__create_file" [label="create_file", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.create_file\nE:\Trae_projects\1\practice06\tool_client.py:60\nfunction in tool_client"];
+            "tool_client__execute_chained_tool_call" [label="execute_chained_tool_call", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.execute_chained_tool_call\nE:\Trae_projects\1\practice06\tool_client.py:256\nfunction in tool_client"];
+            "tool_client__extract_json" [label="extract_json", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.extract_json\nE:\Trae_projects\1\practice06\tool_client.py:236\nfunction in tool_client"];
+            "tool_client__fetch_web_content" [label="fetch_web_content", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.fetch_web_content\nE:\Trae_projects\1\practice06\tool_client.py:75\nfunction in tool_client"];
+            "tool_client__list_files" [label="list_files", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.list_files\nE:\Trae_projects\1\practice06\tool_client.py:27\nfunction in tool_client"];
+            "tool_client__main" [label="main", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.main\nE:\Trae_projects\1\practice06\tool_client.py:390\nfunction in tool_client"];
+            "tool_client__read_file" [label="read_file", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.read_file\nE:\Trae_projects\1\practice06\tool_client.py:48\nfunction in tool_client"];
+            "tool_client__run_tests" [label="run_tests", style="filled", fillcolor="#feccccb2", fontcolor="#000000", group="0", tooltip="tool_client.run_tests\nE:\Trae_projects\1\practice06\tool_client.py:362\nfunction in tool_client"];
+            subgraph "cluster_tool_client__ChainedCallContext" {
+
+                graph [style="filled,rounded", fillcolor="#80808018", label="tool_client.ChainedCallContext"];
+                "tool_client__ChainedCallContext____init__" [label="__init__", style="filled", fillcolor="#ff9999b2", fontcolor="#000000", group="0", tooltip="tool_client.ChainedCallContext.__init__\nE:\Trae_projects\1\practice06\tool_client.py:156\nmethod in tool_client.ChainedCallContext"];
+                "tool_client__ChainedCallContext__add_step" [label="add_step", style="filled", fillcolor="#ff9999b2", fontcolor="#000000", group="0", tooltip="tool_client.ChainedCallContext.add_step\nE:\Trae_projects\1\practice06\tool_client.py:162\nmethod in tool_client.ChainedCallContext"];
+                "tool_client__ChainedCallContext__get_variable" [label="get_variable", style="filled", fillcolor="#ff9999b2", fontcolor="#000000", group="0", tooltip="tool_client.ChainedCallContext.get_variable\nE:\Trae_projects\1\practice06\tool_client.py:173\nmethod in tool_client.ChainedCallContext"];
+                "tool_client__ChainedCallContext__set_variable" [label="set_variable", style="filled", fillcolor="#ff9999b2", fontcolor="#000000", group="0", tooltip="tool_client.ChainedCallContext.set_variable\nE:\Trae_projects\1\practice06\tool_client.py:170\nmethod in tool_client.ChainedCallContext"];
+            }
+        }
+    }
+        "tool_client" -> "tool_client__AVAILABLE_TOOLS" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__ChainedCallContext" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__TOOLS_SCHEMA" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__build_analysis_prompt" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__call_llm" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__create_file" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__create_file" [style="solid",  color="#000000"];
+        "tool_client" -> "tool_client__execute_chained_tool_call" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__extract_json" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__fetch_web_content" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__fetch_web_content" [style="solid",  color="#000000"];
+        "tool_client" -> "tool_client__list_files" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__list_files" [style="solid",  color="#000000"];
+        "tool_client" -> "tool_client__main" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__main" [style="solid",  color="#000000"];
+        "tool_client" -> "tool_client__read_file" [style="dashed",  color="#838b8b"];
+        "tool_client" -> "tool_client__read_file" [style="solid",  color="#000000"];
+        "tool_client" -> "tool_client__run_tests" [style="dashed",  color="#838b8b"];
+        "tool_client__ChainedCallContext" -> "tool_client__ChainedCallContext____init__" [style="dashed",  color="#838b8b"];
+        "tool_client__ChainedCallContext" -> "tool_client__ChainedCallContext__add_step" [style="dashed",  color="#838b8b"];
+        "tool_client__ChainedCallContext" -> "tool_client__ChainedCallContext__get_variable" [style="dashed",  color="#838b8b"];
+        "tool_client__ChainedCallContext" -> "tool_client__ChainedCallContext__set_variable" [style="dashed",  color="#838b8b"];
+        "tool_client__ChainedCallContext__add_step" -> "tool_client__ChainedCallContext____init__" [style="solid",  color="#000000"];
+        "tool_client__ChainedCallContext__get_variable" -> "tool_client__ChainedCallContext____init__" [style="solid",  color="#000000"];
+        "tool_client__call_llm" -> "tool_client__TOOLS_SCHEMA" [style="solid",  color="#000000"];
+        "tool_client__execute_chained_tool_call" -> "tool_client__AVAILABLE_TOOLS" [style="solid",  color="#000000"];
+        "tool_client__execute_chained_tool_call" -> "tool_client__ChainedCallContext" [style="solid",  color="#000000"];
+        "tool_client__execute_chained_tool_call" -> "tool_client__ChainedCallContext____init__" [style="solid",  color="#000000"];
+        "tool_client__execute_chained_tool_call" -> "tool_client__ChainedCallContext__add_step" [style="solid",  color="#000000"];
+        "tool_client__execute_chained_tool_call" -> "tool_client__build_analysis_prompt" [style="solid",  color="#000000"];
+        "tool_client__execute_chained_tool_call" -> "tool_client__call_llm" [style="solid",  color="#000000"];
+        "tool_client__execute_chained_tool_call" -> "tool_client__extract_json" [style="solid",  color="#000000"];
+        "tool_client__main" -> "tool_client__execute_chained_tool_call" [style="solid",  color="#000000"];
+        "tool_client__main" -> "tool_client__run_tests" [style="solid",  color="#000000"];
+        "tool_client__run_tests" -> "tool_client__create_file" [style="solid",  color="#000000"];
+        "tool_client__run_tests" -> "tool_client__execute_chained_tool_call" [style="solid",  color="#000000"];
+    }
